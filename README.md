@@ -1,5 +1,7 @@
 # arp-mitm-lab
 
+![The lab: client, attacker and server on one bridge, with the poisoned ARP entries and the REDIRECT that makes the local socket fire](docs/lab.png)
+
 A minimal man-in-the-middle between two hosts on the same subnet: **ARP
 poisoning** to steal the traffic, **iptables REDIRECT** to hand it to a local
 socket, and a **plain Python proxy** to relay it. About 130 lines in `mitm.py`,
@@ -83,6 +85,9 @@ network. Every address in the examples is an RFC 1918 private address from a lab
 third party.
 
 Two things were deliberately left out of the published code: the concrete
-payload (replaced with a placeholder in `original.py`), and any target-specific
-detail. What is left is the technique, which is taught in every entry-level
-network security course.
+payload from the exercise (replaced with a placeholder in `original.py`), and
+any target-specific detail. What is left is the technique, which is taught in
+every entry-level network security course.
+
+Originally written while working through a Layer-2 interception exercise; this
+is the generalised version.
